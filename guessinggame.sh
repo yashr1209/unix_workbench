@@ -1,6 +1,5 @@
 function guessNumberOfFiles(){
-numFile=$(ls -l |grep "^-" |wc -l)
-
+numFile=$(ls -l | grep "^-" | wc -l)
 while true;
 do
 	echo "Please enter a number: "
@@ -8,7 +7,7 @@ read guess
 if [ $guess -lt $numFile ]
 then
 	echo "Your guess is less than the real number, try a slightly higher number."
-elif [ $number -gt $numFile ]
+elif [ $guess -gt $numFile ]
 then
 	echo "Your guess is higher than the real number, try a lower number."
 else
